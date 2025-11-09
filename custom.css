@@ -1,0 +1,28 @@
+/* Custom CSS for ChameleonSwap Documentation */
+
+/* Override logo height in navbar from 1.75rem (h-7) to 3rem */
+nav img[alt*="logo"],
+nav a[href="/"] img,
+.navbar-logo img,
+header img[src*="logo"],
+img[src*="logo-with-text"] {
+  height: 3rem !important;
+  width: auto !important;
+  max-height: 3rem !important;
+}
+
+/* Override h-7 class for logo */
+.h-7[src*="logo"],
+a.h-7 img {
+  height: 3rem !important;
+}
+
+/* Ensure logo container has proper height */
+nav a[href="/"],
+.navbar-logo,
+header a[href="/"] {
+  height: 3rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+

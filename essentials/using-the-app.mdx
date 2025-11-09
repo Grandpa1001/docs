@@ -1,0 +1,442 @@
+---
+title: "Using the App"
+description: "Complete guide to all ChameleonSwap features and functionality"
+---
+
+## Overview
+
+This guide covers all the features and functionality available in ChameleonSwap. Learn how to navigate the interface, swap tokens, manage your portfolio, and explore available pools.
+
+---
+
+## Token Swapping
+
+The core feature of ChameleonSwap is token swapping. The platform uses an aggregator to find the best routes across multiple liquidity sources.
+
+### Swap Interface
+
+The swap interface is located on the main page (`/swap`) and consists of:
+
+<CardGroup cols={2}>
+  <Card title="From Token" icon="arrow-down">
+    Select the token you want to swap from. Click to open the token selector.
+  </Card>
+  <Card title="To Token" icon="arrow-up">
+    Select the token you want to receive. Click to open the token selector.
+  </Card>
+</CardGroup>
+
+### Selecting Tokens
+
+<Steps>
+  <Step title="Open Token Selector">
+    Click on either the "From" or "To" token field to open the token selector modal.
+  </Step>
+
+  <Step title="Browse or Search">
+    You can:
+    - Browse recommended tokens (HYPE, USDC, kHYPE)
+    - Search by token name or symbol
+    - Search by contract address
+    - View your watchlist (starred tokens)
+  </Step>
+
+  <Step title="View Token Details">
+    Each token shows:
+    - Token symbol and name
+    - Current price (if available)
+    - Price change (24h)
+    - Your balance (if connected)
+  </Step>
+
+  <Step title="Select Token">
+    Click on a token to select it. The modal will close and the token will appear in the swap interface.
+  </Step>
+</Steps>
+
+<Tip>
+  You can star tokens to add them to your watchlist for quick access. Click the star icon next to any token in the selector.
+</Tip>
+
+### Entering Amounts
+
+<Steps>
+  <Step title="Enter From Amount">
+    Type the amount you want to swap in the "From" field. You can:
+    - Type a specific amount
+    - Click "Max" to use your entire balance
+    - The "To" amount will update automatically based on current rates
+  </Step>
+
+  <Step title="Review Exchange Rate">
+    The interface shows:
+    - Exchange rate between tokens
+    - Estimated amount you'll receive
+    - Price impact (if significant)
+    - Route information (which pools will be used)
+  </Step>
+
+  <Step title="Adjust Amount">
+    You can modify the amount at any time. The "To" amount will recalculate automatically.
+  </Step>
+</Steps>
+
+### Flipping Tokens
+
+You can quickly reverse the swap direction by clicking the **flip icon** (↕️) between the "From" and "To" fields. This will:
+- Swap the tokens
+- Reverse the amounts
+- Recalculate the exchange rate
+
+### Swap Settings
+
+Click the **settings icon** (⚙️) to adjust transaction parameters:
+
+<AccordionGroup>
+  <Accordion title="Slippage Tolerance">
+    Slippage is the maximum price movement you'll accept during the swap.
+    
+    **Preset Options:**
+    - 0.1% - Very tight (may fail on volatile pairs)
+    - 0.5% - Default (recommended for most swaps)
+    - 1.0% - Loose (better for volatile pairs)
+    
+    **Custom Slippage:**
+    - Enter any value between 0% and 50%
+    - Higher slippage protects against transaction failures but may result in less favorable rates
+    
+    <Warning>
+      Slippage above 5% shows a warning. Very high slippage may expose you to front-running risks.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Transaction Deadline">
+    The maximum time your transaction can be pending before it automatically reverts.
+    
+    **Default:** 20 minutes
+    
+    **Range:** 1 minute to 72 hours (4320 minutes)
+    
+    <Note>
+      If your transaction takes longer than the deadline, it will fail and you won't lose any funds. You can simply try again.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+### Executing a Swap
+
+<Steps>
+  <Step title="Review Swap Details">
+    Before executing, check:
+    - Exchange rate looks correct
+    - You have sufficient balance
+    - Gas fees are acceptable
+    - Route information (if displayed)
+  </Step>
+
+  <Step title="Approve Token (First Time)">
+    For your first swap with a new token, you need to approve it:
+    1. Click **"Approve [Token Name]"**
+    2. Confirm the approval transaction in your wallet
+    3. Wait for confirmation (usually a few seconds)
+    4. The button will change to "Swap"
+  </Step>
+
+  <Step title="Execute Swap">
+    Once approved (or if already approved):
+    1. Click the **"Swap"** button
+    2. Review transaction details in your wallet popup
+    3. Confirm the transaction
+    4. Wait for blockchain confirmation
+  </Step>
+
+  <Step title="Transaction Status">
+    You'll see:
+    - Loading state while transaction is pending
+    - Success notification when complete
+    - Error message if transaction fails
+    - Transaction hash for tracking on block explorer
+  </Step>
+</Steps>
+
+### Route Information
+
+ChameleonSwap uses an aggregator that finds the best swap routes. The route may:
+- Use a single liquidity pool (direct swap)
+- Use multiple pools (multi-hop swap)
+- Optimize for best price and lowest gas costs
+
+<Note>
+  Route information is displayed when available. Multi-hop swaps may have slightly higher gas costs but often provide better rates.
+</Note>
+
+---
+
+## Navigation
+
+The ChameleonSwap interface includes a navigation bar at the top with easy access to all features.
+
+### Main Menu
+
+The navigation bar contains:
+
+<CardGroup cols={3}>
+  <Card title="Swap" icon="route" href="/swap">
+    Main swap interface for token exchanges
+  </Card>
+  <Card title="Points" icon="trophy" href="/points">
+    View your points, leaderboard, and leagues
+  </Card>
+  <Card title="Referrals" icon="users" href="/referrals">
+    Manage your referral code and invite friends
+  </Card>
+</CardGroup>
+
+### Points Widget
+
+When your wallet is connected, you'll see a **points widget** in the navigation bar showing:
+- Your total points balance
+- Updates automatically after swaps
+- Click to navigate to the Points page
+
+<Note>
+  The points widget only appears when your wallet is connected and you have points.
+</Note>
+
+### Wallet Connection
+
+The **Connect Wallet** button in the top right:
+- Shows "Connect" when wallet is not connected
+- Shows your address (shortened) when connected
+- Click to open wallet modal for account management
+- Displays "Wrong Network" if not on HyperEVM
+
+---
+
+## Portfolio
+
+The Portfolio page (`/portfolio`) shows your liquidity positions and token balances.
+
+### Accessing Portfolio
+
+Navigate to Portfolio from the main menu (if available) or directly at `/portfolio`.
+
+### Portfolio Features
+
+<AccordionGroup>
+  <Accordion title="Liquidity Positions">
+    View all your active liquidity positions:
+    - Token pairs you've provided liquidity for
+    - Amount of each token in the position
+    - Total value locked (TVL)
+    - Unrealized gains/losses
+  </Accordion>
+
+  <Accordion title="Position Management">
+    For each position, you can:
+    - View position details
+    - Add more liquidity
+    - Remove liquidity
+    - See historical performance
+  </Accordion>
+
+  <Accordion title="Token Balances">
+    View balances for all tokens in your wallet:
+    - Token name and symbol
+    - Balance amount
+    - USD value (if price available)
+    - Price change (24h)
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Portfolio features require a connected wallet. Connect your wallet to view your positions and balances.
+</Note>
+
+---
+
+## Explorer
+
+The Explorer page (`/explorer`) lets you discover and explore all available liquidity pools.
+
+### Accessing Explorer
+
+Navigate to Explorer from the main menu (if available) or directly at `/explorer`.
+
+### Explorer Features
+
+<AccordionGroup>
+  <Accordion title="Pool Discovery">
+    Browse all available liquidity pools:
+    - Token pairs in each pool
+    - Total value locked (TVL)
+    - 24-hour volume
+    - 24-hour fees
+    - Annual percentage rate (APR)
+  </Accordion>
+
+  <Accordion title="Pool Information">
+    Each pool shows:
+    - Token pair (e.g., HYPE/USDC)
+    - Protocol version (V2)
+    - Current reserves
+    - Pool address
+  </Accordion>
+
+  <Accordion title="Pool Actions">
+    From the Explorer, you can:
+    - View pool details
+    - Add liquidity to a pool
+    - See pool statistics
+    - Track pool performance
+  </Accordion>
+</AccordionGroup>
+
+### Pool Statistics
+
+The Explorer displays aggregate statistics:
+- **Total Pools** - Number of active pools
+- **Protocol Version** - Current version (V2)
+- **Total TVL** - Combined value locked across all pools
+- **24h Volume** - Total trading volume in the last 24 hours
+
+---
+
+## Advanced Features
+
+### Token Watchlist
+
+Build a personalized watchlist of tokens:
+
+<Steps>
+  <Step title="Star Tokens">
+    Click the star icon (⭐) next to any token in the token selector to add it to your watchlist.
+  </Step>
+
+  <Step title="View Watchlist">
+    In the token selector, switch to "Watchlist" view to see only your starred tokens.
+  </Step>
+
+  <Step title="Manage Watchlist">
+    Click the star again to remove a token from your watchlist.
+  </Step>
+</Steps>
+
+<Tip>
+  Your watchlist is saved locally in your browser. It persists across sessions but is specific to the browser you're using.
+</Tip>
+
+### Transaction History
+
+View your transaction history:
+- Recent swaps
+- Approval transactions
+- Liquidity additions/removals
+- Transaction status and hashes
+- Links to block explorer
+
+<Note>
+  Transaction history is available through your wallet or the block explorer. ChameleonSwap may display recent transactions in the interface.
+</Note>
+
+### Price Information
+
+Token prices are displayed when available:
+- Current price in USD
+- 24-hour price change
+- Price charts (if integrated)
+- Historical data
+
+<Warning>
+  Prices are for informational purposes only. Actual swap rates may vary based on liquidity and market conditions.
+</Warning>
+
+---
+
+## Tips and Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Check Gas Fees" icon="gas-pump">
+    Always ensure you have enough HYPE tokens to cover gas fees before executing transactions.
+  </Card>
+  <Card title="Review Routes" icon="route">
+    Check the swap route to understand which pools will be used. Multi-hop routes may have higher gas costs.
+  </Card>
+  <Card title="Set Appropriate Slippage" icon="sliders">
+    Use lower slippage for stable pairs and higher slippage for volatile pairs to avoid failed transactions.
+  </Card>
+  <Card title="Monitor Transactions" icon="eye">
+    Keep track of your transaction status. Failed transactions don't cost gas, but you may need to adjust settings.
+  </Card>
+</CardGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Swap Button Not Working">
+    - Ensure your wallet is connected
+    - Check that you have sufficient balance
+    - Verify you're on the correct network (HyperEVM)
+    - Try approving the token again if needed
+  </Accordion>
+
+  <Accordion title="Token Not Appearing">
+    - Try searching by contract address
+    - Ensure the token exists on HyperEVM
+    - Check that you're connected to the correct network
+    - Refresh the page to reload token list
+  </Accordion>
+
+  <Accordion title="Transaction Keeps Failing">
+    - Increase slippage tolerance
+    - Check gas fees and ensure sufficient HYPE balance
+    - Verify token balances are sufficient
+    - Try a smaller amount
+    - Check network congestion
+  </Accordion>
+
+  <Accordion title="Price Seems Wrong">
+    - Prices update in real-time but may lag slightly
+    - Check multiple sources for price verification
+    - Large swaps may have price impact
+    - Review the route information for multi-hop swaps
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="Get Started"
+    icon="rocket"
+    href="/quickstart"
+  >
+    Learn how to connect your wallet and make your first swap.
+  </Card>
+  <Card
+    title="Points System"
+    icon="trophy"
+    href="/points"
+  >
+    Understand how to earn points and climb the leaderboard.
+  </Card>
+  <Card
+    title="Referrals"
+    icon="users"
+    href="/referrals"
+  >
+    Learn about the referral program and how to invite friends.
+  </Card>
+  <Card
+    title="Security"
+    icon="shield"
+    href="/security"
+  >
+    Best practices for keeping your wallet and funds secure.
+  </Card>
+</CardGroup>
+

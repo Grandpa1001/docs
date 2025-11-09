@@ -1,0 +1,363 @@
+---
+title: "Points System"
+description: "Learn how to earn points, climb the leaderboard, and unlock new leagues"
+---
+
+## Overview
+
+ChameleonSwap rewards active traders with points based on their trading volume. Earn points for every swap you make, climb the leaderboard, and unlock new leagues as you progress.
+
+<Card
+  title="View Your Points"
+  icon="trophy"
+  href="https://chameleonswap.xyz/points"
+  target="_blank"
+>
+  Check your current points, rank, and league on the Points page.
+</Card>
+
+---
+
+## How Points Work
+
+### Earning Points
+
+Points are earned automatically for every swap you make on ChameleonSwap. The system tracks your trading activity and awards points based on:
+
+- **Trading Volume (USD)** - The total value of your swaps in USD
+- **Weekly Distribution** - Points are distributed weekly based on your trading volume from the previous week
+- **Proportional Allocation** - Points are distributed proportionally to all traders based on their share of total weekly volume
+
+### Weekly Distribution
+
+Points are distributed every week based on the previous week's trading activity:
+
+<Steps>
+  <Step title="Trading Period">
+    All swaps made during a calendar week (Monday-Sunday, UTC) are tracked.
+  </Step>
+
+  <Step title="Volume Calculation">
+    Your total trading volume in USD is calculated by summing all swap values (`notionalUsd`) from that week.
+  </Step>
+
+  <Step title="Point Allocation">
+    A fixed pool of points (default: 1,000,000 points) is distributed proportionally:
+    - Your share = (Your USD Volume / Total USD Volume) × Total Points Pool
+    - Points are rounded to whole numbers
+  </Step>
+
+  <Step title="Distribution">
+    Points are credited to your account and appear in your points balance.
+  </Step>
+</Steps>
+
+<Note>
+  Points are distributed automatically by the system. You don't need to claim them - they appear in your account after distribution.
+</Note>
+
+### Viewing Your Points
+
+You can view your points in several ways:
+
+<CardGroup cols={2}>
+  <Card title="Points Widget" icon="eye">
+    Check the points widget in the navigation bar (top right) when your wallet is connected.
+  </Card>
+  <Card title="Points Page" icon="trophy" href="https://chameleonswap.xyz/points">
+    Visit the Points page for detailed information about your points, rank, and league.
+  </Card>
+</CardGroup>
+
+The Points page shows:
+- **Total Points** - Your cumulative points from all distributions
+- **Rank** - Your position on the leaderboard
+- **League** - Your current league tier
+- **Total Value (USD)** - Your total trading volume in USD
+- **Referral Bonuses** - Points earned from referrals (if applicable)
+
+---
+
+## Leagues
+
+Leagues are achievement tiers based on your total points. As you earn more points, you'll advance through the leagues.
+
+### League Tiers
+
+<AccordionGroup>
+  <Accordion title="🥉 Bronze League">
+    **Requirement:** 0+ points
+    
+    Starting league for all users. Everyone begins here and can start earning points immediately.
+  </Accordion>
+
+  <Accordion title="🥈 Silver League">
+    **Requirement:** 1,000+ points
+    
+    Reach Silver by accumulating 1,000 points through trading. This shows consistent trading activity.
+  </Accordion>
+
+  <Accordion title="🥇 Gold League">
+    **Requirement:** 10,000+ points
+    
+    Achieve Gold status with 10,000 points. This demonstrates significant trading volume and commitment.
+  </Accordion>
+
+  <Accordion title="💎 Platinum League">
+    **Requirement:** 50,000+ points
+    
+    Reach Platinum with 50,000 points. You're now among the top traders on the platform.
+  </Accordion>
+
+  <Accordion title="💠 Diamond League">
+    **Requirement:** 100,000+ points
+    
+    Diamond league requires 100,000 points. This is reserved for the most active traders.
+  </Accordion>
+
+  <Accordion title="👑 Master League">
+    **Requirement:** 500,000+ points
+    
+    The highest tier - Master league. Achieve 500,000 points to join the elite group of top traders.
+  </Accordion>
+</AccordionGroup>
+
+### Advancing Leagues
+
+<Steps>
+  <Step title="Earn Points">
+    Make swaps to earn points. Every swap contributes to your total points balance.
+  </Step>
+
+  <Step title="Track Progress">
+    Check your current league and points on the Points page. You'll see how many points you need for the next league.
+  </Step>
+
+  <Step title="Automatic Advancement">
+    When you reach the point threshold for the next league, you'll automatically advance. No action required!
+  </Step>
+</Steps>
+
+<Tip>
+  League advancement happens automatically when you cross the threshold. Your league is updated in real-time as points are distributed.
+</Tip>
+
+---
+
+## Leaderboard
+
+The leaderboard ranks all traders based on their total points. Compete with other users to reach the top!
+
+### How the Leaderboard Works
+
+<AccordionGroup>
+  <Accordion title="Ranking System">
+    Traders are ranked by:
+    1. **Total Points** - Cumulative points from all weekly distributions
+    2. **Tie-breaker** - If points are equal, ranking may consider total USD volume
+  </Accordion>
+
+  <Accordion title="Top 10 Display">
+    The leaderboard shows the top 10 traders on the platform:
+    - Rank number (1-10)
+    - Wallet address (shortened)
+    - Total points
+    - Total USD volume
+  </Accordion>
+
+  <Accordion title="Your Rank">
+    Your rank is displayed prominently on the Points page:
+    - Shows your position if you're in the top rankings
+    - Updates automatically as rankings change
+    - Includes your total points and USD volume
+  </Accordion>
+</AccordionGroup>
+
+### Leaderboard Features
+
+The leaderboard displays:
+- **Rank** - Position number (1st, 2nd, 3rd, etc.)
+- **Address** - Wallet address (shortened for privacy)
+- **Points** - Total cumulative points
+- **Total Value (USD)** - Total trading volume in USD
+
+<Note>
+  The leaderboard updates after each weekly distribution. Rankings may change as new points are distributed.
+</Note>
+
+---
+
+## Referral Bonuses
+
+Earn bonus points through the referral system! When you invite friends or are invited by someone, you can earn additional points.
+
+### Types of Referral Bonuses
+
+<CardGroup cols={2}>
+  <Card title="Inviter Bonus" icon="gift">
+    Earn points when users you've invited make swaps. You receive a percentage of their trading volume as bonus points.
+  </Card>
+  <Card title="Invitee Bonus" icon="star">
+    Earn bonus points when you're invited by someone and make your first swaps. A welcome bonus for new users!
+  </Card>
+</CardGroup>
+
+### How Referral Bonuses Work
+
+<Steps>
+  <Step title="Generate Referral Code">
+    Create your referral code after reaching 1,000 USD in trading volume. See the [Referrals guide](/referrals) for details.
+  </Step>
+
+  <Step title="Share Your Code">
+    Share your referral code or link with friends. When they use it, they become your invitees.
+  </Step>
+
+  <Step title="Earn Inviter Bonus">
+    When your invitees make swaps, you earn bonus points based on their trading volume. These points are added to your total.
+  </Step>
+
+  <Step title="Earn Invitee Bonus">
+    If you were invited by someone, you may receive bonus points for your initial swaps as a welcome bonus.
+  </Step>
+</Steps>
+
+### Viewing Referral Bonuses
+
+On the Points page, you'll see:
+- **Total Points** - May include a breakdown showing points from referrals
+- **Referrals Volume** - Total USD volume from users you've invited
+- **Bonus Breakdown** - Separate display of inviter and invitee bonuses (if applicable)
+
+<Note>
+  Referral bonuses are distributed along with weekly point distributions. They appear in your total points balance.
+</Note>
+
+---
+
+## Understanding Your Points Data
+
+### Points Breakdown
+
+The Points page provides detailed information:
+
+<AccordionGroup>
+  <Accordion title="Total Points">
+    Your cumulative points from all sources:
+    - Base points from your own swaps
+    - Inviter bonus points (from referrals)
+    - Invitee bonus points (if you were referred)
+  </Accordion>
+
+  <Accordion title="Total Value (USD)">
+    Your total trading volume in USD across all swaps. This is the basis for point calculations.
+  </Accordion>
+
+  <Accordion title="Rank">
+    Your current position on the leaderboard. Lower numbers are better (1st place is rank #1).
+  </Accordion>
+
+  <Accordion title="League">
+    Your current league tier based on total points. Hover over the info icon to see all league requirements.
+  </Accordion>
+</AccordionGroup>
+
+### Points History
+
+While individual swap points aren't displayed in real-time, you can track:
+- Weekly point distributions (through your total balance)
+- Cumulative progress toward next league
+- Ranking changes over time
+
+---
+
+## Tips for Earning More Points
+
+<CardGroup cols={2}>
+  <Card title="Trade Regularly" icon="chart-line">
+    Consistent trading throughout the week increases your share of the weekly distribution pool.
+  </Card>
+  <Card title="Higher Volume" icon="coins">
+    Larger swap volumes result in more points. Your share is proportional to your USD volume.
+  </Card>
+  <Card title="Invite Friends" icon="users">
+    Build a referral network to earn bonus points from your invitees' trading activity.
+  </Card>
+  <Card title="Stay Active" icon="fire">
+    Regular trading helps maintain your rank and league position. Don't let your points stagnate!
+  </Card>
+</CardGroup>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How are points calculated?">
+    Points are distributed weekly based on your trading volume in USD. A fixed pool of points (default: 1,000,000) is divided proportionally among all traders based on their share of total weekly volume.
+  </Accordion>
+
+  <Accordion title="When are points distributed?">
+    Points are distributed weekly, typically after the end of each calendar week (Monday-Sunday, UTC). Distribution timing may vary.
+  </Accordion>
+
+  <Accordion title="Do I need to claim my points?">
+    No, points are automatically credited to your account after distribution. You don't need to claim them.
+  </Accordion>
+
+  <Accordion title="Can I lose points?">
+    Points are cumulative and don't decrease. However, your rank may change if other traders earn more points than you.
+  </Accordion>
+
+  <Accordion title="What happens if I don't trade for a week?">
+    You won't earn new points for that week, but your existing points remain. Your rank may decrease as other traders earn points.
+  </Accordion>
+
+  <Accordion title="How do referral bonuses work?">
+    When users you've invited make swaps, you earn bonus points based on their trading volume. These are added to your total points during weekly distributions.
+  </Accordion>
+
+  <Accordion title="Can I see my points history?">
+    The Points page shows your total points and current status. Individual weekly distributions are reflected in your cumulative total.
+  </Accordion>
+
+  <Accordion title="What's the difference between points and USD volume?">
+    USD volume is your total trading value. Points are rewards based on that volume, distributed proportionally each week.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="Get Started"
+    icon="rocket"
+    href="/quickstart"
+  >
+    Learn how to connect your wallet and make your first swap to start earning points.
+  </Card>
+  <Card
+    title="Referrals"
+    icon="users"
+    href="/referrals"
+  >
+    Learn how to generate your referral code and earn bonus points by inviting friends.
+  </Card>
+  <Card
+    title="Using the App"
+    icon="book"
+    href="/essentials/using-the-app"
+  >
+    Detailed guide on how to use all ChameleonSwap features, including swapping tokens.
+  </Card>
+  <Card
+    title="FAQ"
+    icon="circle-question"
+    href="/faq"
+  >
+    Find answers to common questions about points, leagues, and more.
+  </Card>
+</CardGroup>
+

@@ -1,0 +1,519 @@
+---
+title: "Security"
+description: "Best practices for keeping your wallet and funds secure on ChameleonSwap"
+---
+
+## Overview
+
+Security is paramount when using DeFi platforms. This guide covers essential security practices to protect your wallet and funds when using ChameleonSwap.
+
+<Warning>
+  **Never share your seed phrase or private keys with anyone.** ChameleonSwap staff will never ask for this information. Anyone requesting it is a scammer.
+</Warning>
+
+---
+
+## Wallet Security
+
+### Protecting Your Seed Phrase
+
+Your seed phrase (recovery phrase) is the master key to your wallet. Treat it with extreme care:
+
+<CardGroup cols={2}>
+  <Card title="✅ DO" icon="check-circle">
+    - Store it offline (written on paper)
+    - Keep it in a secure, private location
+    - Use a hardware wallet for large amounts
+    - Memorize it if possible (advanced users)
+  </Card>
+  <Card title="❌ DON'T" icon="x-circle">
+    - Never share it with anyone
+    - Don't store it digitally (screenshots, cloud, email)
+    - Don't enter it on any website
+    - Don't send it via messaging apps
+  </Card>
+</CardGroup>
+
+### Using Official Channels Only
+
+<Warning>
+  **Always use the official ChameleonSwap website:** https://chameleonswap.xyz/
+</Warning>
+
+**How to verify you're on the official site:**
+- Check the URL carefully - look for typos or misspellings
+- Bookmark the official site after first visit
+- Never click links from unknown sources
+- Verify the site uses HTTPS (secure connection)
+
+**Common phishing tactics:**
+- Fake websites with similar URLs (e.g., `chameleonswap.com` instead of `.xyz`)
+- Social media links to fake sites
+- Email links claiming to be from ChameleonSwap
+- Direct messages with referral links to fake sites
+
+### Hardware Wallets
+
+For significant amounts, consider using a hardware wallet:
+
+<AccordionGroup>
+  <Accordion title="What is a Hardware Wallet?">
+    A hardware wallet is a physical device that stores your private keys offline. It provides an extra layer of security by keeping your keys away from internet-connected devices.
+    
+    Popular options include:
+    - Ledger
+    - Trezor
+    - KeepKey
+  </Accordion>
+
+  <Accordion title="Benefits">
+    - Private keys never leave the device
+    - Protection against malware and viruses
+    - Physical confirmation required for transactions
+    - Works with most Web3 wallets
+  </Accordion>
+
+  <Accordion title="When to Use">
+    Consider a hardware wallet if you:
+    - Hold significant amounts of crypto
+    - Make large transactions regularly
+    - Want maximum security
+    - Are new to crypto and want extra protection
+  </Accordion>
+</AccordionGroup>
+
+### Verifying Contract Addresses
+
+Before interacting with any smart contract:
+
+<Steps>
+  <Step title="Check the Address">
+    Verify the contract address matches the official one. Scammers may create fake contracts with similar addresses.
+  </Step>
+
+  <Step title="Use Official Sources">
+    Only trust contract addresses from:
+    - Official ChameleonSwap documentation
+    - Verified social media accounts
+    - Official website
+  </Step>
+
+  <Step title="Double-Check">
+    Compare addresses character by character. One wrong character means a different contract entirely.
+  </Step>
+</Steps>
+
+---
+
+## Transaction Security
+
+### Reviewing Transaction Details
+
+**Always review before confirming:**
+
+<CardGroup cols={2}>
+  <Card title="Token Addresses" icon="key">
+    Verify the token addresses match what you expect. Fake tokens may have similar names.
+  </Card>
+  <Card title="Amounts" icon="coins">
+    Check both "From" and "To" amounts are correct before confirming.
+  </Card>
+  <Card title="Gas Fees" icon="gas-pump">
+    Review estimated gas fees. Unusually high fees may indicate a problem.
+  </Card>
+  <Card title="Recipient" icon="user">
+    Ensure the recipient address is correct, especially for transfers.
+  </Card>
+</CardGroup>
+
+### Setting Appropriate Slippage
+
+Slippage protects you from unfavorable price movements:
+
+<AccordionGroup>
+  <Accordion title="What is Slippage?">
+    Slippage is the maximum price difference you'll accept during a swap. It protects against price changes while your transaction is pending.
+  </Accordion>
+
+  <Accordion title="Recommended Settings">
+    - **Stable pairs (USDC/USDT):** 0.1-0.5%
+    - **Normal pairs:** 0.5-1.0%
+    - **Volatile pairs:** 1.0-3.0%
+    - **Never exceed 5%** unless absolutely necessary
+  </Accordion>
+
+  <Accordion title="Risks of High Slippage">
+    Very high slippage (>5%) may expose you to:
+    - Front-running attacks
+    - Unfavorable price execution
+    - MEV (Maximal Extractable Value) exploitation
+    
+    Always use the minimum slippage that prevents transaction failures.
+  </Accordion>
+</AccordionGroup>
+
+### Verifying Token Addresses
+
+Before swapping, verify token addresses:
+
+<Steps>
+  <Step title="Check Token Symbol">
+    Ensure the token symbol matches what you expect (e.g., HYPE, USDC, USDT).
+  </Step>
+
+  <Step title="Verify on Explorer">
+    Check the token on the block explorer to confirm it's legitimate:
+    - Correct token name
+    - Expected total supply
+    - Verified contract
+  </Step>
+
+  <Step title="Compare Addresses">
+    If swapping a known token, compare the address with official sources.
+  </Step>
+</Steps>
+
+### Phishing Protection
+
+<Warning>
+  **ChameleonSwap will NEVER:**
+  - Ask for your seed phrase or private keys
+  - Request you to "verify" your wallet
+  - Send you direct messages on social media
+  - Ask you to send tokens to "unlock" your account
+</Warning>
+
+**How to spot phishing:**
+- Urgent or threatening language
+- Requests for personal information
+- Links to suspicious websites
+- Promises of free tokens or airdrops
+- Requests to "verify" or "update" your wallet
+
+**What to do if you suspect phishing:**
+1. **Stop immediately** - Don't click any links
+2. **Verify the source** - Check official channels
+3. **Report it** - Alert the community
+4. **Never share information** - No legitimate service needs your seed phrase
+
+---
+
+## Best Practices
+
+### Wallet Management
+
+<CardGroup cols={2}>
+  <Card title="Regular Updates" icon="arrow-up">
+    Keep your wallet software updated to the latest version. Updates often include security patches.
+  </Card>
+  <Card title="Strong Passwords" icon="lock">
+    Use strong, unique passwords for wallet-related accounts. Consider a password manager.
+  </Card>
+  <Card title="2FA When Available" icon="shield">
+    Enable two-factor authentication (2FA) on all accounts that support it, especially exchanges.
+  </Card>
+  <Card title="Separate Wallets" icon="wallet">
+    Consider using separate wallets for different purposes (trading, savings, etc.).
+  </Card>
+</CardGroup>
+
+### Safe Browsing
+
+<AccordionGroup>
+  <Accordion title="Browser Security">
+    - Use a reputable browser (Chrome, Firefox, Brave)
+    - Keep your browser updated
+    - Use browser extensions carefully
+    - Clear cache and cookies regularly
+    - Consider using a dedicated browser for crypto activities
+  </Accordion>
+
+  <Accordion title="Network Security">
+    - Avoid public Wi-Fi for crypto transactions
+    - Use a VPN if on public networks
+    - Ensure your home network is secure
+    - Be cautious on shared computers
+  </Accordion>
+
+  <Accordion title="Suspicious Links">
+    - Never click links from unknown sources
+    - Hover over links to see the actual URL
+    - Type URLs manually when possible
+    - Use bookmarks for frequently visited sites
+  </Accordion>
+</AccordionGroup>
+
+### Transaction Habits
+
+**Safe transaction practices:**
+
+<Steps>
+  <Step title="Start Small">
+    When trying new tokens or features, start with small amounts to test.
+  </Step>
+
+  <Step title="Double-Check Everything">
+    Review all transaction details carefully before confirming. Take your time.
+  </Step>
+
+  <Step title="Use Test Transactions">
+    For large amounts, consider a small test transaction first to verify everything works.
+  </Step>
+
+  <Step title="Monitor Your Wallet">
+    Regularly check your wallet balance and transaction history for any unauthorized activity.
+  </Step>
+</Steps>
+
+---
+
+## Protecting Against Scams
+
+### Common Scam Types
+
+<AccordionGroup>
+  <Accordion title="Phishing Websites">
+    **What it is:** Fake websites that look like ChameleonSwap
+    
+    **How to protect:**
+    - Always verify the URL is https://chameleonswap.xyz/
+    - Bookmark the official site
+    - Never click links from emails or messages
+    - Check for HTTPS and security certificates
+  </Accordion>
+
+  <Accordion title="Fake Support">
+    **What it is:** Scammers pretending to be ChameleonSwap support
+    
+    **How to protect:**
+    - Real support never asks for seed phrases
+    - Verify support through official channels only
+    - Be suspicious of unsolicited help
+    - Never share private keys or seed phrases
+  </Accordion>
+
+  <Accordion title="Fake Airdrops">
+    **What it is:** Promises of free tokens requiring you to connect your wallet
+    
+    **How to protect:**
+    - Be skeptical of "free" offers
+    - Never connect your wallet to unknown sites
+    - Verify airdrops through official channels
+    - If it sounds too good to be true, it probably is
+  </Accordion>
+
+  <Accordion title="Social Engineering">
+    **What it is:** Manipulation to get you to reveal information or send funds
+    
+    **How to protect:**
+    - Be cautious of urgent requests
+    - Verify identities independently
+    - Don't trust based on profile pictures alone
+    - Take time to think before acting
+  </Accordion>
+</AccordionGroup>
+
+### Official Communication Channels
+
+**Only trust information from:**
+
+- **Official Website:** https://chameleonswap.xyz/
+- **Official Documentation:** This documentation site
+- **Verified Social Media:** Check for verified badges
+- **Official Support:** Through the official website only
+
+<Warning>
+  Be extremely cautious of:
+  - Direct messages on social media
+  - Unsolicited emails
+  - Telegram groups claiming to be official
+  - Discord servers not linked from official sources
+</Warning>
+
+### Reporting Security Issues
+
+If you encounter a security issue:
+
+<Steps>
+  <Step title="Stop Using the Platform">
+    Immediately stop using ChameleonSwap if you suspect a security issue.
+  </Step>
+
+  <Step title="Disconnect Your Wallet">
+    Disconnect your wallet from the site to prevent further access.
+  </Step>
+
+  <Step title="Check Your Transactions">
+    Review your transaction history for any unauthorized activity.
+  </Step>
+
+  <Step title="Report the Issue">
+    Report security issues through official channels only. Never share your seed phrase, even with "support."
+  </Step>
+
+  <Step title="Consider Moving Funds">
+    If you suspect your wallet is compromised, consider moving funds to a new wallet.
+  </Step>
+</Steps>
+
+---
+
+## Additional Security Tips
+
+### For Beginners
+
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="arrow-down">
+    Begin with small amounts while learning. Gain experience before handling larger sums.
+  </Card>
+  <Card title="Learn First" icon="book">
+    Understand how DeFi works before investing significant amounts. Education is your best defense.
+  </Card>
+  <Card title="Use Testnets" icon="flask">
+    Practice on testnets when available. Learn without risking real funds.
+  </Card>
+  <Card title="Ask Questions" icon="circle-question">
+    Don't hesitate to ask questions in official communities. Better safe than sorry.
+  </Card>
+</CardGroup>
+
+### For Advanced Users
+
+<AccordionGroup>
+  <Accordion title="Multi-Signature Wallets">
+    Consider multi-sig wallets for large amounts or shared accounts. Requires multiple approvals for transactions.
+  </Accordion>
+
+  <Accordion title="Cold Storage">
+    For long-term holdings, consider cold storage (completely offline wallets) for maximum security.
+  </Accordion>
+
+  <Accordion title="Transaction Monitoring">
+    Set up alerts for large transactions. Monitor your wallet activity regularly.
+  </Accordion>
+
+  <Accordion title="Smart Contract Audits">
+    Before interacting with new contracts, check if they've been audited by reputable firms.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Security Checklist
+
+Use this checklist to ensure your security:
+
+<Checklist>
+  <ChecklistItem checked={false}>
+    I have stored my seed phrase securely offline
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I only use the official ChameleonSwap website
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I have bookmarked the official site
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I never share my seed phrase or private keys
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I review all transaction details before confirming
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I use appropriate slippage settings
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I verify token addresses before swapping
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    My wallet software is up to date
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I use strong, unique passwords
+  </ChecklistItem>
+  <ChecklistItem checked={false}>
+    I'm cautious of phishing attempts
+  </ChecklistItem>
+</Checklist>
+
+---
+
+## What to Do If Compromised
+
+If you suspect your wallet has been compromised:
+
+<Warning>
+  **Act immediately - every second counts!**
+</Warning>
+
+<Steps>
+  <Step title="Move Funds Immediately">
+    If possible, immediately move your funds to a new, secure wallet. Speed is critical.
+  </Step>
+
+  <Step title="Disconnect Everything">
+    Disconnect your wallet from all dApps and websites immediately.
+  </Step>
+
+  <Step title="Create New Wallet">
+    Create a completely new wallet with a new seed phrase. Never reuse compromised credentials.
+  </Step>
+
+  <Step title="Review All Activity">
+    Check all transaction history to understand what happened and what was accessed.
+  </Step>
+
+  <Step title="Report the Incident">
+    Report the security incident through official channels. Help protect others.
+  </Step>
+
+  <Step title="Learn from It">
+    Understand how the compromise happened to prevent it in the future.
+  </Step>
+</Steps>
+
+---
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Get Started"
+    icon="rocket"
+    href="/quickstart"
+  >
+    Learn how to safely connect your wallet and start using ChameleonSwap.
+  </Card>
+  <Card
+    title="Using the App"
+    icon="book"
+    href="/essentials/using-the-app"
+  >
+    Detailed guide on using ChameleonSwap features safely.
+  </Card>
+  <Card
+    title="FAQ"
+    icon="circle-question"
+    href="/faq"
+  >
+    Find answers to common questions, including security-related topics.
+  </Card>
+</CardGroup>
+
+---
+
+## Remember
+
+<Note>
+  **Your security is your responsibility.** While ChameleonSwap implements security best practices, you must also take steps to protect yourself. When in doubt, err on the side of caution.
+</Note>
+
+**Key principles:**
+- Never share your seed phrase or private keys
+- Always verify you're on the official site
+- Review all transactions carefully
+- Start small and learn as you go
+- When something seems suspicious, it probably is
+
+Stay safe and trade responsibly! 🛡️
+

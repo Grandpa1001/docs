@@ -1,80 +1,254 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Get Started"
+description: "Learn how to connect your wallet and make your first swap on ChameleonSwap"
 ---
 
-## Get started in three steps
+## Welcome to ChameleonSwap
 
-Get your documentation site running locally and make your first customization.
+Get started with ChameleonSwap in just a few simple steps. This guide will walk you through connecting your wallet and making your first token swap.
 
-### Step 1: Set up your local environment
+<Card
+  title="Launch ChameleonSwap"
+  icon="rocket"
+  href="https://chameleonswap.xyz/"
+  target="_blank"
+>
+  Open the application to get started.
+</Card>
+
+---
+
+## Step 1: Connect Your Wallet
+
+To use ChameleonSwap, you'll need to connect a Web3 wallet. ChameleonSwap supports all wallets compatible with RainbowKit.
+
+### Supported Wallets
+
+ChameleonSwap works with popular wallets including:
+
+- **MetaMask** - Browser extension and mobile app
+- **WalletConnect** - Connect with mobile wallets
+- **Coinbase Wallet** - Coinbase's Web3 wallet
+- **Rainbow** - Beautiful, simple wallet
+- And many more through WalletConnect
+
+### How to Connect
+
+<Steps>
+  <Step title="Click Connect Wallet">
+    On the ChameleonSwap homepage, click the **"Connect"** button in the top right corner of the navigation bar.
+  </Step>
+
+  <Step title="Select Your Wallet">
+    A modal will appear showing available wallet options. Choose your preferred wallet from the list.
+  </Step>
+
+  <Step title="Approve Connection">
+    Follow the prompts in your wallet to approve the connection. You may need to:
+    - Sign a message to verify ownership
+    - Approve the connection request
+  </Step>
+
+  <Step title="Switch to HyperEVM">
+    If you're on a different network, you'll be prompted to switch to **HyperEVM** (Chain ID: 999). Your wallet will ask you to approve the network switch.
+  </Step>
+</Steps>
+
+<Warning>
+  Make sure you're connected to the **HyperEVM** network (Chain ID: 999). If you see a "Wrong Network" button, click it to switch networks automatically.
+</Warning>
+
+---
+
+## Step 2: Make Your First Swap
+
+Once your wallet is connected, you're ready to swap tokens!
+
+### Understanding the Swap Interface
+
+The swap interface consists of:
+
+- **From Token** - The token you want to swap from
+- **To Token** - The token you want to receive
+- **Amount Fields** - Enter the amount you want to swap
+- **Swap Button** - Execute the swap transaction
+- **Settings Icon** - Adjust slippage tolerance and transaction deadline
+
+### Making a Swap
+
+<Steps>
+  <Step title="Select Your Tokens">
+    Click on the token selector for the "From" field to choose the token you want to swap. Then select the "To" token you want to receive.
+    
+    <Tip>
+      You can search for tokens by name or symbol in the token selector modal.
+    </Tip>
+  </Step>
+
+  <Step title="Enter Amount">
+    Type the amount you want to swap in the "From" field. The "To" amount will be calculated automatically based on current market rates.
+    
+    <Note>
+      You can also click "Max" to use your entire balance of the selected token.
+    </Note>
+  </Step>
+
+  <Step title="Review Swap Details">
+    Before executing, review:
+    - Exchange rate
+    - Estimated gas fees
+    - Minimum amount you'll receive (considering slippage)
+    - Route information (if using aggregator)
+  </Step>
+
+  <Step title="Approve Token (First Time Only)">
+    If this is your first time swapping a specific token, you'll need to approve it for spending. This is a one-time transaction that allows the router to use your tokens.
+    
+    Click **"Approve [Token]"** and confirm the transaction in your wallet.
+  </Step>
+
+  <Step title="Execute Swap">
+    Once approved (or if already approved), click the **"Swap"** button. Review the transaction details in your wallet popup and confirm the transaction.
+  </Step>
+
+  <Step title="Wait for Confirmation">
+    Your transaction will be submitted to the HyperEVM network. Wait for confirmation - this usually takes a few seconds. You'll see a success notification once the swap is complete.
+  </Step>
+</Steps>
+
+### Swap Features
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion title="Flip Tokens">
+    Click the arrow icon between the "From" and "To" fields to quickly swap the tokens and reverse the direction of your swap.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
+
+  <Accordion title="Settings">
+    Click the settings icon (⚙️) to adjust:
+    - **Slippage Tolerance** - Maximum price movement you'll accept (default: 0.5%)
+    - **Transaction Deadline** - Maximum time for the transaction to complete (default: 20 minutes)
     
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+    <Warning>
+      Lower slippage may cause transactions to fail if prices move quickly. Higher slippage protects against failures but may result in less favorable rates.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Token Balances">
+    Your token balances are displayed below each token selector. The balance updates automatically after transactions.
+  </Accordion>
+
+  <Accordion title="Route Information">
+    ChameleonSwap uses an aggregator to find the best swap routes across multiple liquidity sources. The route details show you the path your swap will take.
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+---
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+## About HyperEVM Network
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+ChameleonSwap operates on **HyperEVM**, a blockchain network optimized for DeFi applications.
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+### Network Details
 
-### Step 3: Go live
+- **Network Name:** HyperEVM
+- **Chain ID:** 999
+- **Native Token:** HYPE
+- **Block Explorer:** [HyperEVM Explorer](https://explorer.hyperevm.com)
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+### Getting HYPE Tokens
 
-## Next steps
+You'll need HYPE tokens to pay for transaction fees (gas). You can:
 
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
+- Bridge tokens from other networks
+- Purchase HYPE on supported exchanges
+- Receive HYPE from other users
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  Always ensure you have enough HYPE in your wallet to cover gas fees for transactions.
 </Note>
+
+---
+
+## Common Issues and Solutions
+
+<AccordionGroup>
+  <Accordion title="Transaction Failed">
+    If your transaction fails, try:
+    - Increasing slippage tolerance in settings
+    - Ensuring you have enough HYPE for gas fees
+    - Checking that you have sufficient token balance
+    - Waiting a moment and trying again
+  </Accordion>
+
+  <Accordion title="Wrong Network">
+    If you see a "Wrong Network" button:
+    - Click it to automatically switch to HyperEVM
+    - Or manually add HyperEVM to your wallet if needed
+    - Chain ID: 999
+  </Accordion>
+
+  <Accordion title="Token Not Found">
+    If a token doesn't appear in the selector:
+    - Try searching by contract address
+    - Ensure the token exists on HyperEVM
+    - Check that you're connected to the correct network
+  </Accordion>
+
+  <Accordion title="Insufficient Balance">
+    Make sure you have:
+    - Enough of the "From" token to swap
+    - Sufficient HYPE for gas fees
+    - Approved the token for spending (if required)
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+Now that you've made your first swap, explore more features:
+
+<CardGroup cols={2}>
+  <Card
+    title="Earn Points"
+    icon="trophy"
+    href="/points"
+  >
+    Learn how to earn points for every swap and climb the leaderboard.
+  </Card>
+  <Card
+    title="Invite Friends"
+    icon="users"
+    href="/referrals"
+  >
+    Generate your referral code and earn bonus points.
+  </Card>
+  <Card
+    title="Using the App"
+    icon="book"
+    href="/essentials/using-the-app"
+  >
+    Detailed guide on all ChameleonSwap features.
+  </Card>
+  <Card
+    title="Security Tips"
+    icon="shield"
+    href="/security"
+  >
+    Learn how to keep your wallet and funds secure.
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+If you encounter any issues or have questions:
+
+- Check our [FAQ section](/faq) for common questions
+- Review the [Security guide](/security) for best practices
+- Ensure you're using the official ChameleonSwap site: https://chameleonswap.xyz/
+
+<Warning>
+  Always verify you're on the official ChameleonSwap website. Never share your seed phrase or private keys with anyone.
+</Warning>
