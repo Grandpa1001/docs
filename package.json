@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "dev": "mintlify dev",
+    "preview": "mintlify preview"
+  },
   "devDependencies": {
-    "canvas": "^3.2.0"
+    "canvas": "^3.2.0",
+    "mintlify": "^4.2.188"
   }
 }
